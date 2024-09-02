@@ -211,14 +211,14 @@ class Brain:
         return self.eeg_power[7]
 
 
-if __name__ == '__main__':
-    port_num = 9600
-    brain_stream = serial.Serial('COM3', port_num)  # 串口端口
-    brain = Brain(brain_stream)
+# if __name__ == '__main__':
+#     port_num = 9600
+#     brain_stream = serial.Serial('COM3', port_num)  # 串口端口
+#     brain = Brain(brain_stream)
 
-    while True:
-        if brain.update():
-            print("New data packet received:")
-            print(brain.read_csv())
-        else:
-            print("No new data packet.")
+#     while True:
+#         if brain.update():
+#             print("New data packet received:")
+#             print(brain.read_csv())
+#         else:
+#             print("No new data packet.")

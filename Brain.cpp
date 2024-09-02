@@ -29,6 +29,8 @@ void Brain::init() {
 }
 
 boolean Brain::update() {
+    // brainStream->available() 
+    // returns an integer representing the number of currently readable bytes.
     if (brainStream->available()) {
         latestByte = brainStream->read();
 
